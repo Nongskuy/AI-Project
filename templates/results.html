@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hasil akhir</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      /* CSS untuk membuat elemen berada di posisi tengah */
+      body,
+      html {
+        background: #cbe4de;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #f5f5f5; */
+      }
+
+      /* CSS untuk mengatur tata letak gambar dan teks */
+      .result-container {
+        max-width: 450px;
+        background-color: #fff;
+        padding: 60px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .result-container h1 {
+        font-size: 36px;
+        color: #0e8388;
+        margin-bottom: 20px;
+      }
+
+      .result-container h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .result-container h3 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .result-container img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        max-width: 200px;
+        height: auto;
+        border: 5px solid #0e8388;
+      }
+
+      .btn-blue {
+        background-color: #0e8388;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn-blue:hover {
+        background-color: #0c6d72;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-container">
+      <h1>Result</h1>
+      <h2>Predicted: {{ label }}</h2>
+      <h3>Accuracy: {{ accuracy }}%</h3>
+      <img src="{{ image_file }}" alt="Uploaded Image" />
+      <button class="btn-blue" onclick="location.href='/'">Coba Lagi</button>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

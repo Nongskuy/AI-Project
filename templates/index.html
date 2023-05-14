@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tambahkan baris ini untuk memuat file CSS Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Final Project Grup 3 AI 2023</title>
+    <style>
+      body {
+        background: #cfa900;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #97240f;
+        height: 70px;
+        padding: 0 20px;
+        color: whitesmoke;
+        font-family: "Poppins", sans-serif;
+      }
+      h3 {
+        color: #2C3333;
+      }
+      h5{
+        color: #2E4F4F;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: lighter;
+        font-family: "Brush Script MT", sans-serif;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .center {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+      }
+      .btn-blue {
+        background-color: #09b333;
+        color: white;
+        border: none;
+      }
+      .btn-seagreen:hover {
+        background-color: #0c5558;
+        color: white;
+      }
+    </style>
+    <!-- Tambahkan baris ini untuk memuat font poppins -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Image Classification</h1>
+    </div>
+    <br />
+    <br />
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center mt-5"
+    >
+      <h3 class="center">Rice Image Recognition</h3>
+      <h5 class="center">Artificial Intelligence - A (Group 3)</h5>
+    </div>
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <label for="file" class="form-label mt-3">Choose Image</label>
+          <br />
+          <form
+            method="POST"
+            enctype="multipart/form-data"
+            action="/"
+            class="mb-3"
+          >
+            <div class="input-group">
+              <input
+                type="file"
+                name="file"
+                id="file"
+                class="form-control"
+                accept="image/*"
+                required
+              />
+              <button type="submit" class="btn btn-blue">Upload</button>
+            </div>
+          </form>
+          <br />
+          <div class="row mt-3">
+            <div class="col">
+                <img src="{{ url_for('static', filename='images/Arborio.jpg') }}" alt="Image 1" class="img-fluid" width="150px"/>
+            </div>
+            <div class="col">
+                <img src="{{ url_for('static', filename='images/Basmati.jpg') }}" alt="Image 2" class="img-fluid" />
+            </div>
+            <div class="col">
+                <img src="{{ url_for('static', filename='images/Ipsala.jpg') }}" alt="Image 3" class="img-fluid" />
+            </div>
+            <div class="col">
+                <img src="{{ url_for('static', filename='images/Jasmine.jpg') }}" alt="Image 4" class="img-fluid" />
+            </div>
+            <div class="col">
+                <img src="{{ url_for('static', filename='images/Karacadag.jpg') }}" alt="Image 5" class="img-fluid" />
+            </div>
+        </div>        
+        </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-U+HAXr8VdWcT+frYBPhkLzHf8G2Qq3v+/I11+WTwQiKjibNNT34aMfqlz+il9jLX"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
